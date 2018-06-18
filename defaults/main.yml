@@ -59,7 +59,7 @@ rally_requires_pip_packages:
 # the rally pin is updated. The package pins here are only
 # those not already covered by upper constraints.
 rally_pip_packages:
-  - ansible==2.4.3.0
+  - ansible==2.4.4.0
   - morph==0.1.2
   - os-faults==0.1.17
   - positional===1.2.1
