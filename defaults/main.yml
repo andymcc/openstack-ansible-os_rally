@@ -59,12 +59,12 @@ rally_requires_pip_packages:
 # the rally pin is updated. The package pins here are only
 # those not already covered by upper constraints.
 rally_pip_packages:
-  - ansible==2.4.3.0
-  - morph==0.1.2
-  - os-faults==0.1.17
-  - positional===1.2.1
-  - pymysql # not pinned as it is in u-c
-  - rally==0.12.1 # current release at 29 May 2018
+  - ansible~=2.4,<2.5 # Ansible is neither listed in requirements.txt, setup.py. Pin to remove when using project's constraints.
+  - positional        # Not listed in requirements or setup.py. Already pinned in u-c.
+  - pymysql           # Only an extra requirement. Already pinned in u-c.
+  - rally==0.12.1     # current release at 29 May 2018
+  - morph==0.1.2      # Listed in requirements, not pinned in u-c, line to remove when using project's constraints
+  - os-faults==0.1.17 # Listed in requirements, not pinned in u-c, line to remove when using project's constraints
 
 # The inventory group where Rally will be installed.
 # This variable is used by the repo_build process to determine
